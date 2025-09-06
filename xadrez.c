@@ -33,6 +33,7 @@ int main()
     const int bispoMovimento = 5;
     const int rainhaMovimento = 8;
     int aux = 0;
+    int trocaDirecao = 0;
 
     printf("Movimentando Torre\n");
     for (int i = 0; i < torreMovimento; i++)
@@ -54,6 +55,18 @@ int main()
         printf("Cima Direita\n");
         aux++;
     } while (aux < rainhaMovimento);
+
+    printf("\n\nMovimentando Cavalo\n");
+    do
+    {
+
+        for (int i = 0; i < 2; i++)
+        {
+            printf("Baixo \n");
+        }
+        printf("Esquerda \n");
+        trocaDirecao++;
+    } while (trocaDirecao == 0);
 
     return 0;
 }
