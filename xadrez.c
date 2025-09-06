@@ -4,6 +4,15 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+void movimentaPeca(int movimento, char direcao[10])
+{
+    if (movimento > 0) {
+        printf("%s\n", direcao);
+        movimento--;
+        movimentaPeca(movimento, direcao);
+    }
+}
+
 int main()
 {
     // Nível Novato - Movimentação das Peças
@@ -68,5 +77,13 @@ int main()
         trocaDirecao++;
     } while (trocaDirecao == 0);
 
+    printf("\n\nMovimentando Torre Recursivamente\n");
+    movimentaPeca(5, "Direita");
+
+    printf("\n\nMovimentando Bispo Recursivamente\n");
+    movimentaPeca(5, "Esquerda");
+
+    printf("\n\nMovimentando Rainha Recursivamente\n");
+    movimentaPeca(8, "Cima Direita");
     return 0;
 }
